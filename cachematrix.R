@@ -1,8 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The purpose of this set of functions is to provide 
+## a simple implementation of a cached solve() function
+## on a matrix.
 
-## Write a short comment describing this function
-
+## This function makes a cache-matrix object.
+## It expects a matrix as input and returns a list 
+## that represent the operations that can be done over the input matrix.
+## Those operations are set(x), get(), setinverse(inverse) and getinverse()
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -22,8 +25,9 @@ makeCacheMatrix <- function(x = matrix()) {
              getinverse = getinverse)
 }
 
-
-## Write a short comment describing this function
+## This function applies the solve() function to a cache-matrix object.
+## It checks whether exist a computed inverse of the cache-matrix or not,
+## and returns a cache copy of the inverse or computes it.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
