@@ -28,6 +28,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## This function applies the solve() function to a cache-matrix object.
 ## It checks whether exist a computed inverse of the cache-matrix or not,
 ## and returns a cache copy of the inverse or computes it.
+## It expects a cache-matrix as input and further parameters needed for 
+## accomplish solve() function.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
